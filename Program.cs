@@ -79,6 +79,16 @@ namespace ChDigit
             }
 
 
+            //Four-digit number control 
+            if (N.Length == 4 && N[2] == '零' && N[1] == '百')
+            {
+                char uno = N[0];
+                char tre = N[3];
+              
+                Console.WriteLine(getInteger1(uno) + "0" + getInteger1(tre));
+
+            }
+
 
             //Five-digit number control 
             if (N.Length == 5 && N[3] == '十' && N[1] == '百')
