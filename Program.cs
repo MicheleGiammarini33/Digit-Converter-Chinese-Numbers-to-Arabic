@@ -80,14 +80,13 @@ namespace ChDigit
 
 
 
-
             //Five-digit number control 
             if (N.Length == 5 && N[3] == '十' && N[1] == '百')
             {
                 char uno = N[0];
                 char tre = N[2];
                 char quattro = N[4];
-                Console.WriteLine(getInteger1(quattro) + ""+ getInteger1(uno) + "" + getInteger1(tre));
+                Console.WriteLine(getInteger1(uno)  + ""+ getInteger1(tre) + "" + getInteger1(quattro));
 
             }
 
