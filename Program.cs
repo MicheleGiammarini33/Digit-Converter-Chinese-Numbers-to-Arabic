@@ -16,7 +16,10 @@ namespace ChDigit
             char[] N = Console.ReadLine().ToCharArray();
 
 
+            //if (N.Contains('一') || N.Contains('一'))
 
+                if (@"零一二两三四五六七八九十百千万".Any(N.Contains))
+                { 
 
             //One-digit number control 
 
@@ -66,7 +69,6 @@ namespace ChDigit
             }
 
 
-
             //Three-digit number control 
 
 
@@ -108,7 +110,7 @@ namespace ChDigit
                 {
                     case '零': return 0;
                     case '一': return 1;
-                    case '二':return 2;
+                    case '二': return 2;
                     case '两': return 2;
                     case '三': return 3;
                     case '四': return 4;
@@ -123,7 +125,7 @@ namespace ChDigit
                     case '万': return 10000;
                     default: return 0;
                 }
-
+            }
             }
         }
     }
