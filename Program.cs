@@ -66,13 +66,35 @@ namespace ChDigit
                     Console.WriteLine(getInteger1(uno) + "00");
                 }
 
-            }
+
+                    if (N[1] == '千')
+                    {
+                        char uno = N[0];
+
+                        Console.WriteLine(getInteger1(uno) + "000");
+                    }
 
 
-            //Three-digit number control 
+                    if (N[1] == '万')
+                    {
+                        char uno = N[0];
+
+                        Console.WriteLine(getInteger1(uno) + "0000");
+                    }
+
+                    if (N[1] == '亿')
+                    {
+                        char uno = N[0];
+
+                        Console.WriteLine(getInteger1(uno) + "00000000");
+                    }
+                }
 
 
-            if (N.Length == 3 && N[1] == '十')
+                //Three-digit number control 
+
+
+                if (N.Length == 3 && N[1] == '十')
             {
                 char uno = N[0];
                 char tre = N[2];
@@ -102,7 +124,35 @@ namespace ChDigit
 
             }
 
-        }
+                //Seven-digit number control 
+                if (N.Length == 7 && N[1] == '千' && N[5] == '十' && N[3] == '百')
+                {
+                    char uno = N[0];
+                    char tre = N[2];
+                    char quattro = N[4];
+                    char sei = N[6];
+                    Console.WriteLine(getInteger1(uno) + "" + getInteger1(tre) + "" + getInteger1(quattro) + "" + getInteger1(sei));
+
+                }
+
+
+                //Nina-digit number control 
+                if (N.Length == 9 && N[1] == '万' && N[5] == '百' && N[3] == '千' && N[7] == '十')
+                {
+                    char uno = N[0];
+                    char tre = N[2];
+                    char quattro = N[4];
+                    char sei = N[6];
+                    char otto = N[8];
+                    Console.WriteLine(getInteger1(uno) + "" + getInteger1(tre) + "" + getInteger1(quattro) + "" + getInteger1(sei) + "" + getInteger1(otto));
+
+                }
+
+
+
+
+
+            }
             static int getInteger1(char uno)
             {
 
