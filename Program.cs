@@ -103,15 +103,39 @@ namespace ChDigit
             }
 
 
-            //Four-digit number control 
-            if (N.Length == 4 && N[2] == '零' && N[1] == '百')
-            {
-                char uno = N[0];
-                char tre = N[3];
-              
-                Console.WriteLine(getInteger1(uno) + "0" + getInteger1(tre));
+                //Four-digit number control 
+                if (N.Length == 4)
+                {
 
-            }
+                    if (N[2] == '零' && N[1] == '百')
+                    {
+                        char uno = N[0];
+                        char tre = N[3];
+
+                        Console.WriteLine(getInteger1(uno) + "0" + getInteger1(tre));
+
+                    }
+
+                    if (N[2] == '零' && N[1] == '千')
+                    {
+                        char uno = N[0];
+                        char tre = N[3];
+
+                        Console.WriteLine(getInteger1(uno) + "00" + getInteger1(tre));
+
+                    }
+
+
+                    if (N[2] == '零' && N[1] == '万')
+                    {
+                        char uno = N[0];
+                        char tre = N[3];
+
+                        Console.WriteLine(getInteger1(uno) + "000" + getInteger1(tre));
+
+                    }
+
+                }
 
 
             //Five-digit number control 
@@ -123,6 +147,20 @@ namespace ChDigit
                 Console.WriteLine(getInteger1(uno)  + ""+ getInteger1(tre) + "" + getInteger1(quattro));
 
             }
+
+                ////Six-digit number control 
+                //if (N.Length == 6)
+                //{
+                //    if (N[1] == '千' && N[5] == '十' && N[3] == '百')
+                //    {
+                //        char uno = N[0];
+                //        char tre = N[2];
+                //        char quattro = N[4];
+                //        char sei = N[6];
+                //        Console.WriteLine(getInteger1(uno) + "" + getInteger1(tre) + "" + getInteger1(quattro) + "" + getInteger1(sei));
+                //    }
+                //}
+
 
                 //Seven-digit number control 
                 if (N.Length == 7 && N[1] == '千' && N[5] == '十' && N[3] == '百')
@@ -147,10 +185,6 @@ namespace ChDigit
                     Console.WriteLine(getInteger1(uno) + "" + getInteger1(tre) + "" + getInteger1(quattro) + "" + getInteger1(sei) + "" + getInteger1(otto));
 
                 }
-
-
-
-
 
             }
             static int getInteger1(char uno)
